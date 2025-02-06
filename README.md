@@ -1,44 +1,39 @@
-# Repositório de Treinamento Back-End
+# Back-End Training Repository
 
-Este repositório contém projetos de treinamento focados em desenvolvimento back-end, utilizando diversas tecnologias e práticas para aprimorar habilidades e explorar novas ferramentas.
+This repository contains training projects focused on back-end development, using various technologies and practices to hone skills and explore new tools.
 
- ## Objetivos
+ ## Objectives
 
-- Praticar conceitos essenciais do desenvolvimento back-end.
+- Practice essential concepts of back-end development.
 
-- Aprimorar a lógica de programação e organização de código.
+- Improve programming logic and code organization.
 
-- Explorar frameworks e bancos de dados.
+- Explore frameworks and databases.
 
-- Implementar autenticação e autorização.
+- Implement authentication and authorization.
 
-- Criar APIs seguindo boas práticas.
+- Create APIs following good practices.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Java**
+- Java
 
 
 
-## Como Usar
+## How to use
 
-1. Clone este repositório:
+1. Clone this repository:
    ```bash
    git clone https://github.com/seu-usuario/backend-training.git
    ```
 
-2. Escolha um projeto dentro de uma tecnologia específica.
+2. Choose a project within a specific technology.
 
-3. Siga as instruções no README de cada projeto para configurar e executar.
+3. Follow the instructions in each project's README to configure and run.
 
-## Contribuições
+## Contributions
 
-Sinta-se à vontade para contribuir com sugestões, melhorias ou novos projetos de treinamento.
-
-
+Feel free to contribute suggestions, improvements or new training projects.
 
 
-
-
-
-
+Translated with DeepL.com (free version)
