@@ -34,6 +34,3 @@ This repository contains training projects focused on back-end development, usin
 ## Contributions
 
 Feel free to contribute suggestions, improvements or new training projects.
-
-
-Translated with DeepL.com (free version)
