@@ -4,7 +4,7 @@ import model.enums.TipoContato;
 
 import java.time.LocalDate;
 
-public class Contato {
+public abstract class Contato {
     private String nome;
     private String telefone;
     private String email;
