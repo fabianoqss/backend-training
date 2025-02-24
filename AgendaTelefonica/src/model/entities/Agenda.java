@@ -14,7 +14,7 @@ public class Agenda {
         contatos.remove(nome);
     }
 
-    public void buscarContatos(String nome){
+    public void buscarContato(String nome){
         for(Contato c : contatos){
             if(nome == c.getNome()){
                 System.out.println(
@@ -30,6 +30,9 @@ public class Agenda {
 
 
     public void listarContato(){
-        
+        for(Contato c: contatos){
+            System.out.println("Nome: " + c.getNome() +
+                    "\n Telefone" + c.getTelefone());
+        }
     }
 }
