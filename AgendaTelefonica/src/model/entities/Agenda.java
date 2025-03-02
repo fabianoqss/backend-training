@@ -25,6 +25,8 @@ public class Agenda {
                         + "\n Tipo do Contato: " + c.getTipoContato()
                                 + "\n Data de Nascimento: " + c.getDataNascimento()
                                 + "\n Endereço: " +  c.getEndereco());
+            }else {
+                System.out.println("Contato não encontrado!");
             }
 
     }

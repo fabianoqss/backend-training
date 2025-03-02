@@ -1,4 +1,8 @@
 package model.exceptions;
 
-public class PersistenciaException {
+public class PersistenciaException extends Exception{
+    public PersistenciaException(String msg){
+        super(msg);
+    }
+    
 }
