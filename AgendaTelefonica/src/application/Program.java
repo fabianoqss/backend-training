@@ -8,13 +8,6 @@ public class Program {
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
-        System.out.print("");
 
     }
 }

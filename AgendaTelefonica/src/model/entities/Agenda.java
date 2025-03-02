@@ -16,8 +16,8 @@ public class Agenda {
     }
 
     public void buscarContato(String nome){
-        for(Contato c : contatos.values()){
-            if(nome == c.getNome()){
+            if(contatos.containsKey(nome)){
+                Contato c = contatos.get(nome);
                 System.out.println(
                         "Nome: " + c.getNome()
                         + "\n Telefone: " + c.getTelefone()
@@ -26,7 +26,7 @@ public class Agenda {
                                 + "\n Data de Nascimento: " + c.getDataNascimento()
                                 + "\n Endereço: " +  c.getEndereco());
             }
-        }
+
     }
 
 
@@ -36,4 +36,9 @@ public class Agenda {
                     "\n Telefone" + c.getTelefone());
         }
     }
+
+    public void editarContatos(String nome){
+
+    }
+
 }
