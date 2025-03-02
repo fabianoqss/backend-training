@@ -1,13 +1,14 @@
 package model.entities;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Agenda {
-    private List<Contato> contatos = new ArrayList<>();
+    private Map<String, Contato> contatos = new HashMap<>();
 
-    public void addContatos(Contato contato){
-        contatos.add(contato);
+    public void addContatos(String name, Contato contato){
+        contatos.put(name, contato);
     }
 
     public void removeContatos(String nome){
