@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Program {
     private static Scanner sc = new Scanner(System.in);
     private static Agenda agenda = new Agenda();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
@@ -51,8 +51,24 @@ public class Program {
 
         System.out.println("Digite o tipo do Contato: ");
         TipoContato tipoContato = TipoContato.valueOf(sc.nextLine());
-        
 
+        System.out.println("Digite a data de Nascimento do Contato: ");
+        LocalDate data = LocalDate.parse(sc.next(), formatter);
+
+        System.out.println("Digite o endereço do Contato: ");
+        String endereco = sc.nextLine();
+
+        if(tipoContato == TipoContato.PROFESSIONAL){
+            System.out.println("Digite a  Empresa: ");
+            String empresa = sc.nextLine();
+            System.out.println("Digite o Cargo: ");
+            String cargo = sc.nextLine();
+            System.out.println("Digite o departamento: ");
+            String departamento = sc.nextLine();
+
+        }else if(tipoContato == TipoContato.PESSOAL)
+            System.out.println("Digite a Relação");
+            String relação = sc.nextLine();
     }
 
 }
