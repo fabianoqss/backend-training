@@ -1,13 +1,15 @@
 package model.entities;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Agenda {
-    private List<Contato> contatos = new ArrayList<>();
+    private Map<String, Contato> contatos = new HashMap<>();
 
-    public void addContatos(Contato contato){
-        contatos.add(contato);
+    public void addContatos(String name, Contato contato){
+        contatos.put(name, contato);
     }
 
     public void removeContatos(String nome){
@@ -15,8 +17,8 @@ public class Agenda {
     }
 
     public void buscarContato(String nome){
-        for(Contato c : contatos){
-            if(nome == c.getNome()){
+            if(contatos.containsKey(nome)){
+                Contato c = contatos.get(nome);
                 System.out.println(
                         "Nome: " + c.getNome()
                         + "\n Telefone: " + c.getTelefone()
@@ -24,15 +26,21 @@ public class Agenda {
                         + "\n Tipo do Contato: " + c.getTipoContato()
                                 + "\n Data de Nascimento: " + c.getDataNascimento()
                                 + "\n Endereço: " +  c.getEndereco());
+            }else {
+                System.out.println("Contato não encontrado!");
             }
-        }
+
     }
 
 
     public void listarContato(){
-        for(Contato c: contatos){
+        for(Contato c: contatos.values()){
             System.out.println("Nome: " + c.getNome() +
                     "\n Telefone" + c.getTelefone());
         }
+    }
+
+    public void editarContatos(String nome){
+
     }
 }
