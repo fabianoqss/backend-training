@@ -1,9 +1,6 @@
 package model.entities;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Agenda {
     private Map<String, Contato> contatos = new HashMap<>();
@@ -13,23 +10,19 @@ public class Agenda {
     }
 
     public void removeContatos(String nome){
+        verificaExistencia(nome);
         contatos.remove(nome);
     }
 
     public void buscarContato(String nome){
-            if(contatos.containsKey(nome)){
-                Contato c = contatos.get(nome);
-                System.out.println(
-                        "Nome: " + c.getNome()
+        Contato c = verificaExistencia(nome);
+        System.out.println(
+                "Nome: " + c.getNome()
                         + "\n Telefone: " + c.getTelefone()
                         + "\n Email: " + c.getEmail()
                         + "\n Tipo do Contato: " + c.getTipoContato()
-                                + "\n Data de Nascimento: " + c.getDataNascimento()
-                                + "\n Endereço: " +  c.getEndereco());
-            }else {
-                System.out.println("Contato não encontrado!");
-            }
-
+                        + "\n Data de Nascimento: " + c.getDataNascimento()
+                        + "\n Endereço: " +  c.getEndereco());
     }
 
 
@@ -42,5 +35,13 @@ public class Agenda {
 
     public void editarContatos(String nome){
 
+    }
+
+    public Contato verificaExistencia(String nome){
+        Contato contato = contatos.get(nome);
+        if(contato == null){
+            throw new NoSuchElementException("Contato não Encontrado ou não existe!");
+        }
+        return contato;
     }
 }
