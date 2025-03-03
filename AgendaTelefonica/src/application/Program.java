@@ -1,6 +1,8 @@
 package application;
 
 import model.entities.Agenda;
+import model.entities.ContatoPessoal;
+import model.entities.ContatoProfissional;
 import model.enums.TipoContato;
 
 import java.time.LocalDate;
@@ -15,14 +17,22 @@ public class Program {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
-        String resposta;
+        int opcao;
 
         do {
             exibeMenu();
 
-            System.out.println("Deseja continuar? (SIM/NAO)");
-            resposta = sc.nextLine().toUpperCase();
-        }while(resposta.equals("SIM"));
+            opcao = sc.nextInt();
+            switch (opcao) {
+                case 1 -> adicionarContato();
+                case 2 -> removerContato();
+                case 3 -> editarContato();
+                case 4 -> buscarContato();
+                case 5 -> listarContatos();
+                case 0 -> System.out.println("Saindo do programa...");
+                default -> System.out.println("Opção inválida! Tente novamente.");
+            }
+        }while(opcao != 0);
 
     }
 
@@ -38,8 +48,7 @@ public class Program {
         System.out.println("0 - Finalizar o programa.");
     }
 
-    public static void adicaoDeContato(){
-        Scanner sc = new Scanner(System.in);
+    public static void adicionarContato(){
         System.out.println("Digite o nome do Contato: ");
         String name = sc.nextLine();
 
@@ -65,10 +74,29 @@ public class Program {
             String cargo = sc.nextLine();
             System.out.println("Digite o departamento: ");
             String departamento = sc.nextLine();
-
+            agenda.addContatos(name, new ContatoProfissional(name, telefone, email, tipoContato, data, endereco, empresa, cargo, departamento));
         }else if(tipoContato == TipoContato.PESSOAL)
             System.out.println("Digite a Relação");
-            String relação = sc.nextLine();
+            String relacao = sc.nextLine();
+            agenda.addContatos(name, new ContatoPessoal(name, telefone, email, tipoContato, data, endereco, relacao));
     }
 
+    public static void removerContato(){
+        System.out.println("Digite o nome do contato a ser removido: ");
+        agenda.removeContatos(sc.nextLine());
+    }
+
+    public static void editarContato(){
+
+    }
+
+    public static void buscarContato(){
+        System.out.println("Digite o nome do contato a ser buscado: ");
+        agenda.buscarContato(sc.nextLine());
+    }
+
+    public static void listarContatos(){
+        System.out.println("Listando os contatos: ");
+        agenda.listarContato();
+    }
 }
