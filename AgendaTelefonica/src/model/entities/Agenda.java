@@ -28,8 +28,7 @@ public class Agenda {
 
     public void listarContato(){
         for(Contato c: contatos.values()){
-            System.out.println("Nome: " + c.getNome() +
-                    "\n Telefone" + c.getTelefone());
+            System.out.println("Nome: " + c.getNome() + ", Telefone : " + c.getTelefone() +  " \n");
         }
     }
 
