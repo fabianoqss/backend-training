@@ -4,7 +4,7 @@ import model.enums.TipoContato;
 
 import java.time.LocalDate;
 
-public abstract class Contato  {
+public abstract class Contato  implements Comparable<Contato>{
     private String nome;
     private String telefone;
     private String email;
@@ -72,6 +72,9 @@ public abstract class Contato  {
         this.endereco = endereco;
     }
 
-
+    @Override
+    public int compareTo(Contato other){
+        return nome.compareTo(other.getNome());
+    }
 
 }
