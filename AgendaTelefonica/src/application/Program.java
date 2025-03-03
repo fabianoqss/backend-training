@@ -1,16 +1,58 @@
 package application;
 
 import model.entities.Agenda;
+import model.enums.TipoContato;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Locale.setDefault(Locale.US);
+    private static Scanner sc = new Scanner(System.in);
+    private static Agenda agenda = new Agenda();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        Agenda agenda = new Agenda();
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        String resposta;
+
+        do {
+            exibeMenu();
+
+            System.out.println("Deseja continuar? (SIM/NAO)");
+            resposta = sc.nextLine().toUpperCase();
+        }while(resposta.equals("SIM"));
 
     }
+
+
+    public static void exibeMenu(){
+        System.out.println("Selecione uma opção na Agenda Telefônica: ");
+        System.out.println("1 - Adicionar Contato!");
+        System.out.println("2 - Remover Contato!");
+        System.out.println("3 - Editar Contato!");
+        System.out.println("4 - Buscar Contato!");
+        System.out.println("5 - Listar Contatos!");
+        System.out.println("6 - Fazer a persistência dos Contatos em um arquivo JSON ou TXT.");
+        System.out.println("0 - Finalizar o programa.");
+    }
+
+    public static void adicaoDeContato(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o nome do Contato: ");
+        String name = sc.nextLine();
+
+        System.out.println("Digite o telefone do Contato: ");
+        String telefone = sc.nextLine();
+
+        System.out.println("Digite o email do Contato: ");
+        String email = sc.nextLine();
+
+        System.out.println("Digite o tipo do Contato: ");
+        TipoContato tipoContato = TipoContato.valueOf(sc.nextLine());
+        
+
+    }
+
 }

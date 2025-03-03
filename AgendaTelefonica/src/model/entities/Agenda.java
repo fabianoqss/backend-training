@@ -33,7 +33,7 @@ public class Agenda {
     }
 
     public void editarContatos(String nome){
-
+        Contato c = verificaExistencia(nome);
     }
 
     public Contato verificaExistencia(String nome){
