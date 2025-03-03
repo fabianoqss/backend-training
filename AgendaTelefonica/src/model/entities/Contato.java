@@ -4,7 +4,7 @@ import model.enums.TipoContato;
 
 import java.time.LocalDate;
 
-public abstract class Contato {
+public abstract class Contato  {
     private String nome;
     private String telefone;
     private String email;
@@ -71,4 +71,7 @@ public abstract class Contato {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+
+
 }
