@@ -18,7 +18,7 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         int opcao;
-
+        
         do {
             exibeMenu();
 
@@ -29,6 +29,7 @@ public class Program {
                 case 3 -> editarContato();
                 case 4 -> buscarContato();
                 case 5 -> listarContatos();
+                case 6 -> persistenciaDados();
                 case 0 -> System.out.println("Saindo do programa...");
                 default -> System.out.println("Opção inválida! Tente novamente.");
             }
@@ -98,5 +99,9 @@ public class Program {
     public static void listarContatos(){
         System.out.println("Listando os contatos: ");
         agenda.listarContato();
+    }
+
+    public static void persistenciaDados(){
+
     }
 }
