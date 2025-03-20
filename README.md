@@ -24,7 +24,7 @@ This repository contains training projects focused on back-end development, usin
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/seu-usuario/backend-training.git
+   git clone https://github.com/fabianoqss/backend-training.git
    ```
 
 2. Choose a project within a specific technology.
