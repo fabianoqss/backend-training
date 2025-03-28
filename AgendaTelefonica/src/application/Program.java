@@ -18,7 +18,6 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         int opcao;
-        
         do {
             exibeMenu();
 
@@ -34,7 +33,6 @@ public class Program {
                 default -> System.out.println("Opção inválida! Tente novamente.");
             }
         }while(opcao != 0);
-
     }
 
 
@@ -47,9 +45,11 @@ public class Program {
         System.out.println("5 - Listar Contatos!");
         System.out.println("6 - Fazer a persistência dos Contatos em um arquivo JSON ou TXT.");
         System.out.println("0 - Finalizar o programa.");
+        System.out.print("---> ");
     }
 
     public static void adicionarContato(){
+        sc.nextLine();
         System.out.println("Digite o nome do Contato: ");
         String name = sc.nextLine();
 
@@ -64,6 +64,8 @@ public class Program {
 
         System.out.println("Digite a data de Nascimento do Contato: ");
         LocalDate data = LocalDate.parse(sc.next(), formatter);
+
+        sc.nextLine();
 
         System.out.println("Digite o endereço do Contato: ");
         String endereco = sc.nextLine();

@@ -2,7 +2,6 @@ package model.persistence;
 
 import model.entities.Agenda;
 import model.exceptions.PersistenciaException;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
