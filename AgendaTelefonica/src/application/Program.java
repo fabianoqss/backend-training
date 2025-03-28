@@ -59,11 +59,19 @@ public class Program {
         System.out.println("Digite o email do Contato: ");
         String email = sc.nextLine();
 
-        System.out.println("Digite o tipo do Contato: ");
-        TipoContato tipoContato = TipoContato.valueOf(sc.nextLine());
+        TipoContato tipoContato = null;
 
-        System.out.println("Digite a data de Nascimento do Contato: ");
-        LocalDate data = LocalDate.parse(sc.next(), formatter);
+        while(tipoContato == null){
+            try{
+                System.out.println("Digite o tipo Contato (PESSOAL ou PROFISSIONAL)");
+                tipoContato = TipoContato.valueOf(sc.nextLine().toUpperCase());
+            } catch (IllegalArgumentException e) {
+                System.out.println("Tipo Inválido! Tente novamente");
+            }
+        }
+
+        System.out.println("Digite a data de Nascimento do Contato: (dd/MM/yyyy) ");
+        LocalDate data = LocalDate.parse(sc.nextLine(), formatter);
 
         sc.nextLine();
 
@@ -78,13 +86,15 @@ public class Program {
             System.out.println("Digite o departamento: ");
             String departamento = sc.nextLine();
             agenda.addContatos(name, new ContatoProfissional(name, telefone, email, tipoContato, data, endereco, empresa, cargo, departamento));
-        }else if(tipoContato == TipoContato.PESSOAL)
+        }else if(tipoContato == TipoContato.PESSOAL) {
             System.out.println("Digite a Relação");
             String relacao = sc.nextLine();
             agenda.addContatos(name, new ContatoPessoal(name, telefone, email, tipoContato, data, endereco, relacao));
+        }
     }
 
     public static void removerContato(){
+        sc.nextLine();
         System.out.println("Digite o nome do contato a ser removido: ");
         agenda.removeContatos(sc.nextLine());
     }
