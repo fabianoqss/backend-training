@@ -4,6 +4,7 @@ import model.entities.Agenda;
 import model.entities.ContatoPessoal;
 import model.entities.ContatoProfissional;
 import model.enums.TipoContato;
+import model.persistence.PersistenciaJson;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -114,6 +115,8 @@ public class Program {
     }
 
     public static void persistenciaDados(){
-
+        System.out.println("Passe o caminho do arquivo que deseja salvar: ");
+        String path = sc.nextLine();
+        PersistenciaJson.salvarDados(agenda, path);
     }
 }
