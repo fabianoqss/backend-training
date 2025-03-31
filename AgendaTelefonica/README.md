@@ -18,7 +18,8 @@
 
 ## 📂 Arquitetura
 
-AgendaTelefonica ├── .gitignore ├── .idea/ # Configurações do IntelliJ IDEA ├── AgendaTelefonica.iml # Arquivo de configuração do projeto ├── README.md # Documentação do projeto └── src/ # Código-fonte ├── application/ │ └── Program.java # Classe principal do programa └── model/ ├── entities/ # Entidades do projeto │ ├── Agenda.java │ ├── Contato.java │ ├── ContatoPessoal.java │ └── ContatoProfissional.java ├── enums/ │ └── TipoContato.java # Enum para tipos de contato ├── exceptions/ │ └── PersistenciaException.java # Exceção personalizada └── persistence/ └── PersistenciaJson.java # Persistência em JSON
+![image](https://github.com/user-attachments/assets/52a43dfc-802f-40c6-9e22-1413c983a897)
+
 
 ## 🚀 Como Executar
 
