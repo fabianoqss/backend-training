@@ -104,6 +104,7 @@ public class Program {
     }
 
     public static void buscarContato(){
+        sc.nextLine();
         System.out.println("Digite o nome do contato a ser buscado: ");
         agenda.buscarContato(sc.nextLine());
     }
