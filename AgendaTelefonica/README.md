@@ -18,31 +18,7 @@
 
 ## 📂 Arquitetura
 
-└── AgendaTelefonica
-├── .gitignore
-├── .idea
-├── .gitignore
-├── misc.xml
-├── modules.xml
-├── uiDesigner.xml
-└── vcs.xml
-├── AgendaTelefonica.iml
-├── README.md
-└── src
-├── application
-└── Program.java
-└── model
-├── entities
-├── Agenda.java
-├── Contato.java
-├── ContatoPessoal.java
-└── ContatoProfissional.java
-├── enums
-└── TipoContato.java
-├── exceptions
-└── PersistenciaException.java
-└── persistence
-└── PersistenciaJson.java
+AgendaTelefonica ├── .gitignore ├── .idea/ # Configurações do IntelliJ IDEA ├── AgendaTelefonica.iml # Arquivo de configuração do projeto ├── README.md # Documentação do projeto └── src/ # Código-fonte ├── application/ │ └── Program.java # Classe principal do programa └── model/ ├── entities/ # Entidades do projeto │ ├── Agenda.java │ ├── Contato.java │ ├── ContatoPessoal.java │ └── ContatoProfissional.java ├── enums/ │ └── TipoContato.java # Enum para tipos de contato ├── exceptions/ │ └── PersistenciaException.java # Exceção personalizada └── persistence/ └── PersistenciaJson.java # Persistência em JSON
 
 ## 🚀 Como Executar
 
