@@ -6,7 +6,7 @@ public class Agenda {
     private Map<String, Contato> contatos = new HashMap<>();
 
     public void addContatos(String name, Contato contato){
-        contatos.put(name, contato);
+        contatos.put(name.toLowerCase(), contato);
     }
 
     public void removeContatos(String nome){
@@ -37,7 +37,7 @@ public class Agenda {
     }
 
     public Contato verificaExistencia(String nome){
-        Contato contato = contatos.get(nome);
+        Contato contato = contatos.get(nome.toLowerCase());
         if(contato == null){
             throw new NoSuchElementException("Contato não Encontrado ou não existe!");
         }

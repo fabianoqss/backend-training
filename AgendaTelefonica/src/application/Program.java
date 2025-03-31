@@ -64,7 +64,7 @@ public class Program {
 
         while(tipoContato == null){
             try{
-                System.out.println("Digite o tipo Contato (PESSOAL ou PROFISSIONAL)");
+                System.out.println("Digite o tipo Contato (PESSOAL ou PROFESSIONAL)");
                 tipoContato = TipoContato.valueOf(sc.nextLine().toUpperCase());
             } catch (IllegalArgumentException e) {
                 System.out.println("Tipo Inválido! Tente novamente");
@@ -87,7 +87,7 @@ public class Program {
             String departamento = sc.nextLine();
             agenda.addContatos(name, new ContatoProfissional(name, telefone, email, tipoContato, data, endereco, empresa, cargo, departamento));
         }else if(tipoContato == TipoContato.PESSOAL) {
-            System.out.println("Digite a Relação");
+            System.out.println("Digite a Relação: (Primo/Irmaõ/Pai/Mãe)");
             String relacao = sc.nextLine();
             agenda.addContatos(name, new ContatoPessoal(name, telefone, email, tipoContato, data, endereco, relacao));
         }
