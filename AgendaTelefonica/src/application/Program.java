@@ -73,8 +73,7 @@ public class Program {
 
         System.out.println("Digite a data de Nascimento do Contato: (dd/MM/yyyy) ");
         LocalDate data = LocalDate.parse(sc.nextLine(), formatter);
-
-        sc.nextLine();
+        
 
         System.out.println("Digite o endereço do Contato: ");
         String endereco = sc.nextLine();
