@@ -2,6 +2,8 @@ package model.entities;
 
 import java.util.*;
 
+import static application.Program.sc;
+
 public class Agenda {
     private Map<String, Contato> contatos = new HashMap<>();
 
@@ -37,6 +39,21 @@ public class Agenda {
 
     public void editarContatos(String nome){
         Contato c = verificaExistencia(nome);
+
+        System.out.println("Editar contato: " + c.getNome());
+        System.out.println("Digite o novo telefone (ou pressione Enter para manter o atual): ");
+        String novoTelefone = sc.nextLine();
+        if (!novoTelefone.isEmpty()) {
+            c.setTelefone(novoTelefone);
+        }
+
+        System.out.println("Digite o novo email (ou pressione Enter para manter o atual): ");
+        String novoEmail = sc.nextLine();
+        if (!novoEmail.isEmpty()) {
+            c.setEmail(novoEmail);
+        }
+
+        System.out.println("Contato atualizado com sucesso!");
     }
 
     public Contato verificaExistencia(String nome){

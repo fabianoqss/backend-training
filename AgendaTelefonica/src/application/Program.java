@@ -12,7 +12,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
-    private static Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
     private static Agenda agenda = new Agenda();
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
