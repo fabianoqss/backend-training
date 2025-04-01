@@ -39,4 +39,19 @@ public class ContatoProfissional extends Contato{
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + getNome() + "\n" +
+                "Telefone: " + getTelefone() + "\n" +
+                "Email: " + getEmail() + "\n " +
+                "Tipo do Contato: " + getTipoContato() +  "\n " +
+                "Data de Nascimento: " + getDataNascimento() + "\n " +
+                "Endereco: " + getEndereco() + "\n " +
+                "Empresa: " + getEmpresa() + "\n " +
+                "Cargo: " + getCargo() + "\n " +
+                "Departamento: " + getDepartamento()
+                ;
+    }
+
 }

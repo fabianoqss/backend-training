@@ -19,4 +19,16 @@ public class ContatoPessoal extends Contato{
     public void setRelacao(String relacao) {
         this.relacao = relacao;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + getNome() + "\n" +
+                "Telefone: " + getTelefone() + "\n" +
+                "Email: " + getEmail() + "\n" +
+                "Tipo do Contato: " + getTipoContato() +  "\n" +
+                "Data de Nascimento: " + getDataNascimento() + "\n" +
+                "Endereco: " + getEndereco() + "\n" +
+                "Relação: " + getRelacao()
+                ;
+    }
 }

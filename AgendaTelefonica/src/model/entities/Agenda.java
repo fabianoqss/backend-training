@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.enums.TipoContato;
+
 import java.util.*;
 
 import static application.Program.sc;
@@ -16,17 +18,16 @@ public class Agenda {
         contatos.remove(nome);
     }
 
-    public void buscarContato(String nome){
+    public void buscarContato(String nome) {
         Contato c = verificaExistencia(nome);
-        System.out.println("===========================================");
-        System.out.println(
-                "Nome: " + c.getNome()
-                        + "\n Telefone: " + c.getTelefone()
-                        + "\n Email: " + c.getEmail()
-                        + "\n Tipo do Contato: " + c.getTipoContato()
-                        + "\n Data de Nascimento: " + c.getDataNascimento()
-                        + "\n Endereço: " +  c.getEndereco());
-        System.out.println("===========================================");
+
+        if (c != null) {
+            System.out.println("===========================================");
+            System.out.println(c.toString());
+            System.out.println("===========================================");
+        } else {
+            System.out.println("Contato não encontrado.");
+        }
     }
 
 
