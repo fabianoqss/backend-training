@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Program {
     public static Scanner sc = new Scanner(System.in);
     private static Agenda agenda = new Agenda();
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
@@ -44,7 +44,7 @@ public class Program {
         System.out.println("3 - Editar Contato!");
         System.out.println("4 - Buscar Contato!");
         System.out.println("5 - Listar Contatos!");
-        System.out.println("6 - Fazer a persistência dos Contatos em um arquivo JSON ou TXT.");
+        System.out.println("6 - Fazer a persistência dos Contatos em um arquivo JSON.");
         System.out.println("0 - Finalizar o programa.");
         System.out.print("---> ");
     }
@@ -117,7 +117,8 @@ public class Program {
     }
 
     public static void persistenciaDados(){
-        System.out.println("Passe o caminho do arquivo que deseja salvar: ");
+        sc.nextLine();
+        System.out.println("Passe o caminho do arquivo que deseja salvar, usando o \\\\: ");
         String path = sc.nextLine();
         PersistenciaJson.salvarDados(agenda, path);
     }

@@ -23,7 +23,7 @@ public class Agenda {
 
         if (c != null) {
             System.out.println("===========================================");
-            System.out.println(c.toString());
+            System.out.println(c);
             System.out.println("===========================================");
         } else {
             System.out.println("Contato não encontrado.");

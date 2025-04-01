@@ -1,0 +1,13 @@
+{
+  "contatos": {
+    "lucas": {
+      "relacao": "Primo",
+      "nome": "Lucas",
+      "telefone": "(83) 99925-2008",
+      "email": "lucas@gmail.com",
+      "tipoContato": "PESSOAL",
+      "dataNascimento": "03/01/1990",
+      "endereco": "Rua Sla"
+    }
+  }
+}

@@ -1,17 +1,22 @@
 package model.persistence;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import model.entities.Agenda;
-import model.exceptions.PersistenciaException;
+import model.util.LocalDateAdapter;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.time.LocalDate;
 
 public class PersistenciaJson {
 
     public static void salvarDados(Agenda agenda, String path) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter()) // Adiciona suporte para LocalDate
+                .setPrettyPrinting()
+                .create();
 
         String json = gson.toJson(agenda);
 
@@ -23,6 +28,5 @@ public class PersistenciaJson {
         } catch (IOException e) {
             System.out.println("Não foi possível salvar o arquivo! " + e.getMessage());
         }
-
     }
 }
