@@ -100,7 +100,9 @@ public class Program {
     }
 
     public static void editarContato(){
-
+        System.out.println("Digite o nome do contato a ser editado: ");
+        String nome = sc.nextLine();
+        agenda.editarContatos(nome);
     }
 
     public static void buscarContato(){
