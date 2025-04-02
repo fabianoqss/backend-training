@@ -18,7 +18,8 @@
 
 ## 📂 Arquitetura
 
-![image](https://github.com/user-attachments/assets/52a43dfc-802f-40c6-9e22-1413c983a897)
+![image](https://github.com/user-attachments/assets/343db595-5e69-4bae-b8d5-6065b1029b78)
+
 
 
 ## 🚀 Como Executar
