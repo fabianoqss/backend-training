@@ -67,7 +67,7 @@ public class Program {
                 System.out.println("Digite o tipo Contato (PESSOAL ou PROFESSIONAL)");
                 tipoContato = TipoContato.valueOf(sc.nextLine().toUpperCase());
             } catch (IllegalArgumentException e) {
-                System.out.println("Tipo Inválido! Tente novamente");
+                System.out.println("Tipo inválido! Você digitou um valor incorreto. Tente PESSOAL ou PROFISSIONAL.");
             }
         }
 
