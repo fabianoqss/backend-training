@@ -18,6 +18,7 @@ O sistema permite gerenciar empréstimos de livros, cadastro de usuários e cont
 ✅ **Lambdas e Streams para Filtros e Consultas**  
 
 ## 🧱 Arquitetura do Projeto
+![image](https://github.com/user-attachments/assets/777838d5-19bd-448b-bcb8-14398b8ad763)
 
 
 ## 🛠️ Tecnologias Utilizadas
