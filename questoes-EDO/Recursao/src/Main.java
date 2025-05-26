@@ -1,4 +1,6 @@
-import Question2.Questao2;
+import questao11.Questao11;
+import questao15.Questao15;
+import questao7.Questao7;
 import question1.Questao1;
 import question3.Questao3;
 import question5.Questao5;
@@ -33,5 +35,20 @@ public class Main {
         String resposta6 = Questao6.termosPA(5, 0.80, 0.58);
         System.out.println(resposta6);
 
+        System.out.println(" ------------ Questão 7 ------------ ");
+        int [] array2 = {1, 2, 3, 4, 5};
+        String questao7 = Questao7.recebeArray(array2, array2.length - 1);
+        System.out.println(questao7);
+
+
+        System.out.println(" ------------ Questão 11 ------------ ");
+        String questao11 = Questao11.seq(100);
+
+        System.out.println(questao11);
+
+
+        System.out.println(" ------------ Questão 15 ------------ ");
+        int questao15 = Questao15.sum(254);
+        System.out.println(questao15);
     }
 }
