@@ -1,6 +1,7 @@
 import questao11.Questao11;
 import questao15.Questao15;
 import questao7.Questao7;
+import questao8.Questao8;
 import question1.Questao1;
 import question3.Questao3;
 import question5.Questao5;
@@ -39,6 +40,9 @@ public class Main {
         int [] array2 = {1, 2, 3, 4, 5};
         String questao7 = Questao7.recebeArray(array2, array2.length - 1);
         System.out.println(questao7);
+
+        System.out.println(" ------------ Questão 8 ------------ ");
+        Questao8.resposta();
 
 
         System.out.println(" ------------ Questão 11 ------------ ");
