@@ -1,4 +1,6 @@
 import questao11.Questao11;
+import questao13.Questao13;
+import questao14.Questao14;
 import questao15.Questao15;
 import questao7.Questao7;
 import questao8.Questao8;
@@ -47,8 +49,17 @@ public class Main {
 
         System.out.println(" ------------ Questão 11 ------------ ");
         String questao11 = Questao11.seq(100);
-
         System.out.println(questao11);
+
+        System.out.println(" ------------ Questão 12 ------------ ");
+
+        System.out.println(" ------------ Questão 13 ------------ ");
+        double questao13 = Questao13.hiperfatorial(5);
+        System.out.printf("%.0f%n", questao13);
+
+        System.out.println(" ------------ Questão 14 ------------ ");
+        int questao14 = Questao14.somaNumeros(5,3);
+        System.out.println(questao14);
 
 
         System.out.println(" ------------ Questão 15 ------------ ");
